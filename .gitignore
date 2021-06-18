@@ -1,0 +1,16 @@
+# Images
+images/
+
+# Visual Studio
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PEP 582
+__pypackages__/
+
+# Environments
+env/
