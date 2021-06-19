@@ -4,9 +4,10 @@ class Validation:
         self.message = str
 
     def validated_float(self, message):
+        self.message = message
         while True:
             try:
-                validated_value = input(message).replace(' ', '')
+                validated_value = input(self.message).replace(' ', '')
                 if validated_value == '':
                     return ''
                 else:

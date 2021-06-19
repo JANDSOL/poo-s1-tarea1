@@ -1,6 +1,8 @@
 """En una tienda se ofrece un descuento del 15% sobre el total de la compra
    y un cliente desea saber cuánto deberá pagar finalmente por su compra."""
 
+from validation_num import Validation
+
 class Example:
     """Discount for purchases."""
     def __init__(self):
@@ -26,25 +28,11 @@ class Example:
         print('El valor total a pagar es: $' + str(self.purchase))
 
 
-def validated_value():
-    """Valid data entry by user."""
-    while True:
-        try:
-            total_purch = input('Ingrese el total de compras: $')\
-                                                .replace(' ', '')
-            if total_purch == '':
-                return ''
-            else:
-                total_purch = float(total_purch)
-                break
-        except ValueError:
-            print(' ingrese un valor correcto\n')
-    return total_purch
-
-
 if __name__ == '__main__':
     discount_purchases = Example()
-    value = validated_value()
+    vali = Validation()  # Object to validate value.
+    value = vali.validated_float('Ingrese el total de compras: $')
+
     if value == '': discount_purchases.read_total_purchase()
     else: discount_purchases.read_total_purchase(value)
     discount_purchases.calculation_discount()
