@@ -12,6 +12,7 @@ class Validation:
                     return ''
                 else:
                     validated_value = float(validated_value)
+                    validated_value = round(validated_value, 2)
                     break
             except ValueError:
                 print(' ingrese un dato correcto...\n')

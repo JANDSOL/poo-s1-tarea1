@@ -28,8 +28,8 @@ if __name__ == '__main__':
         grade = vali_value.validated_float('Ingrese una calificación: ')
         if grade == '':
             student_grade.read_grade()
+            break
         elif grade >= 7:
-            grade = round(grade, 2)
             student_grade.read_grade(grade)
             break
         else:
